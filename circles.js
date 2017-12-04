@@ -9,12 +9,11 @@ function getRandomRadius(min, max) {
   return Math.floor(Math.random()*(max-min)+min+1);
 }
 
-
 // Create circles, play sound
 function onKeyDown(event) { // paper.js method
 	
 	// Select <audio> from DOM based on keydown
-	var audio = document.querySelector('audio[data-key="' + event.key +'"]');
+	var audio = document.querySelector("audio[data-key='" + event.key +"']");
 	
   if (audio) {
     // Generate random point
@@ -35,12 +34,12 @@ function onKeyDown(event) { // paper.js method
   }
 }
 
-// Change hue and shrink circles
-function onFrame(event) { // onFrame is from paper.js
+// Animation
+function onFrame(event) { // paper.js method
   for (var i=0; i<animatedCircles.length; i++) {
     var currentCircle = animatedCircles[i];
     
-    // Shrink circles
+    // Shrink circles and change hue
     currentCircle.fillColor.hue += 1;
     currentCircle.scale(0.9);
     
@@ -52,4 +51,3 @@ function onFrame(event) { // onFrame is from paper.js
     }
   }
 }
-
