@@ -1,3 +1,5 @@
+// Playground
+
 // Generate random x coordinate from 0 to 1920
 function getRandomX() {
   return Math.floor(Math.random()*1921);
