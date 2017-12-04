@@ -1,4 +1,4 @@
-// keys and their corresponding sounds and colors
+// keys with corresponding sounds and colors
 var keyData = {
   q: {
 		sound: new Howl({
@@ -165,6 +165,7 @@ function getRandomRadius(min, max) {
   return Math.floor(Math.random()*(max-min)+min+1);
 }
 
+// Create circles, play sound
 function onKeyDown(event) { // paper.js method
   if (keyData[event.key]) {
     // Generate random point
@@ -185,11 +186,12 @@ function onKeyDown(event) { // paper.js method
   }
 }
 
+// Change hue and shrink circles
 function onFrame(event) { // onFrame is from paper.js
-  // Change hue and shrink circles
   for (var i=0; i<animatedCircles.length; i++) {
     var currentCircle = animatedCircles[i];
     
+    // Shrink circles
     currentCircle.fillColor.hue += 1;
     currentCircle.scale(0.9);
     
