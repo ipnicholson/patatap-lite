@@ -2,6 +2,8 @@
 
 var animatedCircles = [];
 
+alert('Press any key from A to Z 🔊')
+
 // Generate random radius from min to max
 function getRandomRadius(min, max) {
   return Math.floor(Math.random()*(max-min)+min+1);
