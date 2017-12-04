@@ -22,7 +22,6 @@ function onKeyDown(event) { // paper.js method
     
     // Create circle at point
     var newCircle = new Path.Circle(point, getRandomRadius(200,400));
-    // newCircle.fillColor = keyData[event.key].color;
     newCircle.fillColor = audio.dataset.color;
 		
 		// Play audio
