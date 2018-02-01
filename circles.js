@@ -22,7 +22,7 @@ function onKeyDown(event) { // paper.js method
     var point = maxPoint * randomPoint; // Create random point betwen (0,0) and viewport size
     
     // Create circle at point
-    var newCircle = new Path.Circle(point, getRandomRadius(200,400));
+    var newCircle = new Path.Circle(point, getRandomRadius(200,500));
     newCircle.fillColor = audio.dataset.color;
 		
 		// Play audio
